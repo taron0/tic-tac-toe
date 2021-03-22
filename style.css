@@ -1,142 +1,174 @@
- #game{
-    width: 400px;
-    height: 400px;
-    background-color: rgb(165, 87, 87);
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-     margin: 0 auto; 
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
+body {
+  background-color: black;
+}
+#game {
+  width: 460px;
+  height: 460px;
+  background-color: black;
+  display: flex;
+  
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
 }
 
-.block{
-    width: 120px;
-    height: 120px;
-    background: black;
-    border: 1px solid white;
-    box-sizing: border-box;
-    line-height: 50px;
-    text-align: center;
-    color: white;
-    font-weight: bold;
-    font-size: 50px;
-    text-transform: uppercase;
-} 
+.block {
+  width: 140px;
+  height: 140px;
+  background: black;
+  
+  /* box-sizing: border-box; */
+  line-height: 50px;
+  text-align: center;
+  align-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 50px;
+  text-transform: uppercase;
+}
+
+.block:nth-child(1) {
+    border-bottom: 8px solid white;
+    border-right:8px solid white;
+}
+.block:nth-child(2) {
+    border-bottom: 8px solid white;
+    border-right:8px solid white;
+}
+.block:nth-child(3) {
+  
+    border-right:8px solid white;
+}
+.block:nth-child(4) {
+    border-bottom: 8px solid white;
+    border-right:8px solid white;
+}
+.block:nth-child(5) {
+    border-bottom: 8px solid white;
+    border-right:8px solid white;
+}
+.block:nth-child(6) {
+   
+    border-right:8px solid white;
+}
+.block:nth-child(7) {
+   
+    border-bottom:8px solid white;
+}
+.block:nth-child(8) {
+   
+    border-bottom:8px solid white;
+}
+
+
 
 .scores {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 600px;
-    margin-left: -300px;
-    margin-top: 280px;
-    text-align: center;
-    cursor: pointer;
-    -webkit-user-select: none;
-    user-select: none;
-  }
-  
-  .scores p {
-    font: 20px "Raleway", sans-serif;
-    font-weight: 400;
-    text-transform: uppercase;
-    line-height: 1;
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-  
-  .scores .swap {
-    display: inline-block;
-    vertical-align: top;
-    width: 30px;
-    height: 30px;
-    margin: -5px -30px 0 0;
-    opacity: 0.4;
-    cursor: pointer;
-    -webkit-transition: opacity 0.1s linear;
-    -moz-transition: opacity 0.1s linear;
-    transition: opacity 0.1s linear;
-  }
-  
-  .scores:hover .swap {
-    opacity: 1;
-  }
-  
-  .scores .score-1, .score-2, .score {
-    font-size: 50px;
-    display: block;
-    height: 60px;
-    padding: 10px 0 0 0;
-    will-change: transform;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-  
-  .scores .score.appear {
-    -webkit-animation: appear 0.3s cubic-bezier(0.5, 4, 0.1, 1.1);
-    -moz-animation: appear 0.3s cubic-bezier(0.5, 4, 0.1, 1.1);
-    animation: appear 0.3s cubic-bezier(0.5, 4, 0.1, 1.1);
-  }
-  
-  .scores .o {
-    display: inline-block;
-    width: 13px;
-    height: 13px;
-    border-width: 2px;
-    margin: 1px;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-  
-  .scores .x {
-    display: inline-block;
-    width: 17px;
-    height: 17px;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-  
-  .scores .x:before,
-  .scores .x:after {
-    top: 2px;
-    left: auto;
-    margin-left: 8px;
-    width: 2px;
-    height: 17px;
-  }
-  
-  .player1,
-  .player2 {
-    width: 230px;
-    white-space: nowrap;
-  }
-  
-  .scores.p1 .p2 {
-    display: none;
-  }
-  
-  .scores.p2 .p1 {
-    display: none;
-  }
-  
-  .scores .turn {
-    opacity: 0.4;
-  }
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 600px;
+  color: white;
+  margin-left: -300px;
+  margin-top: 280px;
+  text-align: center;
+  cursor: pointer;
 
-  .ad-1{
-    width: 300px;
-    height: 600px;
-    background: gray;
-    position: absolute;
-    left: 0px;
-  }
-  
+}
+
+.scores p {
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+ 
+}
+
+.scores .swap {
+  display: inline-block;
+  vertical-align: top;
+  width: 30px;
+  height: 30px;
+  margin: -5px -30px 0 0;
+  opacity: 0.4;
+  cursor: pointer;
+ 
+}
+
+.scores:hover .swap {
+  opacity: 1;
+}
+
+.scores .score-1,
+.score-2,
+.score {
+  font-size: 30px;
+  display: block;
+  height: 50px;
+  padding: 10px 0 0 0;
+  color: white;
+  will-change: transform;
+
+} 
+
+
+
+.scores .o {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  border-width: 2px;
+  margin: 1px;
+
+}
+
+.scores .x {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+
+}
+
+.scores .x:before,
+.scores .x:after {
+  top: 2px;
+  left: auto;
+  margin-left: 8px;
+  width: 2px;
+  height: 17px;
+}
+
+.player1,
+.player2 {
+  width: 230px;
+  white-space: nowrap;
+}
+
+.scores.p1 .p2 {
+  display: none;
+}
+
+.scores.p2 .p1 {
+  display: none;
+}
+
+.scores .turn {
+  opacity: 0.4;
+}
+
+.ad-1 {
+  width: 300px;
+  height: 600px;
+  background: gray;
+  position: absolute;
+  left: 0px;
+}
