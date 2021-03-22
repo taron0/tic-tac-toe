@@ -4,11 +4,14 @@ window.onload = function () {
   let score = document.querySelector(".score");
   let scoreOwn = document.querySelector(".score-1");
   let scoreTwo = document.querySelector(".score-2");
+  
   for (let i = 0; i < 9; i++) {
-    game.innerHTML += '<div class="block"></div>';
+
+    game.innerHTML += `<div class="block"></div>`;
+
   }
   let allblock = document.getElementsByClassName("block");
-
+ 
   function getPossibleMovesInvexes() {
     let index = [];
     let j = 0;
@@ -25,7 +28,7 @@ window.onload = function () {
     let index = getPossibleMovesInvexes();
     let random = Math.floor(Math.random() * index.length );
     let randblock = index[random];
-    allblock[randblock].innerHTML = "O";
+    allblock[randblock].innerHTML = `O`;
     goo = 0;
     isGameOver();
   }
@@ -37,6 +40,7 @@ window.onload = function () {
     for (let i = 0; i < 9; i++) {
       game.innerHTML += '<div class="block"></div>';
     }
+    
   }
 
   // false - game running
