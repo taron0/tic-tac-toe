@@ -199,3 +199,52 @@ position: absolute;
   opacity: 0.4;
 }
 
+
+
+
+
+@media (max-width: 630px), (max-height: 800px) {
+  .game {
+    width: 450px;
+    height: 450px;
+    margin-left: -225px;
+    margin-top: -300px;
+  }
+
+ 
+
+ 
+  
+}
+
+@media (max-width: 540px), (max-height: 560px) {
+  .game {
+    width: 300px;
+    height: 300px;
+    margin-left: -150px;
+    margin-top: -215px;
+  }
+  
+  .square {
+    border-width: 2px;
+  }
+  .square .o {
+    border-width: 10px;
+  }
+ 
+  
+
+}
+
+@media (max-height: 480px) {
+
+  .game {
+    top: 40px;
+    margin-top: 10px;
+  }
+  .scores {
+    top: 380px;
+    margin-top: 10px;
+    padding-bottom: 20px;
+  }
+}

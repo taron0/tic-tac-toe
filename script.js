@@ -89,7 +89,7 @@ window.onload = function () {
         allblock[winer[i][1]].innerHTML === `<p class="symbol-O">O</p>` &&
         allblock[winer[i][2]].innerHTML === `<p class="symbol-O">O</p>`;
       if (winX) {
-     
+        
         
         return 1;
       }
