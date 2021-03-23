@@ -25,7 +25,7 @@ body {
   width: 160px;
   height: 160px;
   background: black;
-  
+  position: relative;
   
   /* box-sizing: border-box; */
   line-height: 50px;
@@ -40,6 +40,8 @@ body {
   
 
 }
+
+
 
 .block:nth-child(1) {
     border-bottom: 3px solid white;
@@ -74,7 +76,34 @@ body {
     border-bottom:3px solid white;
 }
 
+.block > .symbol-O{
+position: absolute;
+  font-size: 140px;
+  font-weight: 600;
+  margin: 0;
 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%) ;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+   */
+}
+.block > .symbol-X{
+  position: absolute;
+  font-size: 140px;
+  font-weight: 600;
+  margin: 0;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%) ;
+}
 
 .scores {
   position: absolute;

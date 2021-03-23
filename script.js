@@ -4,14 +4,12 @@ window.onload = function () {
   let score = document.querySelector(".score");
   let scoreOwn = document.querySelector(".score-1");
   let scoreTwo = document.querySelector(".score-2");
-  
+
   for (let i = 0; i < 9; i++) {
-
     game.innerHTML += `<div class="block"></div>`;
-
   }
   let allblock = document.getElementsByClassName("block");
- 
+
   function getPossibleMovesInvexes() {
     let index = [];
     let j = 0;
@@ -26,9 +24,9 @@ window.onload = function () {
 
   function computerMove() {
     let index = getPossibleMovesInvexes();
-    let random = Math.floor(Math.random() * index.length );
+    let random = Math.floor(Math.random() * index.length);
     let randblock = index[random];
-    allblock[randblock].innerHTML = `O`;
+    allblock[randblock].innerHTML = `<p class="symbol-O">O</p>`;
     goo = 0;
     isGameOver();
   }
@@ -40,11 +38,8 @@ window.onload = function () {
     for (let i = 0; i < 9; i++) {
       game.innerHTML += '<div class="block"></div>';
     }
-    
   }
 
-  // false - game running
-  // true - game over
   function isGameOver() {
     let rez = check();
     let index = getPossibleMovesInvexes();
@@ -86,13 +81,13 @@ window.onload = function () {
     ];
     for (let i = 0; i < winer.length; i++) {
       let winX =
-        allblock[winer[i][0]].innerHTML === "X" &&
-        allblock[winer[i][1]].innerHTML === "X" &&
-        allblock[winer[i][2]].innerHTML === "X";
+        allblock[winer[i][0]].innerHTML === `<p class="symbol-X">X</p>` &&
+        allblock[winer[i][1]].innerHTML === `<p class="symbol-X">X</p>` &&
+        allblock[winer[i][2]].innerHTML === `<p class="symbol-X">X</p>`;
       let winO =
-        allblock[winer[i][0]].innerHTML === "O" &&
-        allblock[winer[i][1]].innerHTML === "O" &&
-        allblock[winer[i][2]].innerHTML === "O";
+        allblock[winer[i][0]].innerHTML === `<p class="symbol-O">O</p>` &&
+        allblock[winer[i][1]].innerHTML === `<p class="symbol-O">O</p>` &&
+        allblock[winer[i][2]].innerHTML === `<p class="symbol-O">O</p>`;
       if (winX) {
         return 1;
       }
@@ -105,7 +100,7 @@ window.onload = function () {
   game.onclick = function (e) {
     if (goo === 0) {
       if (e.target.innerHTML === "") {
-        e.target.innerHTML = "X";
+        e.target.innerHTML = `<p class="symbol-X">X</p>`;
         goo = 1;
         if (!isGameOver()) {
           setTimeout(computerMove, 1000);
