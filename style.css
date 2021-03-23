@@ -87,10 +87,7 @@ position: absolute;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%) ;
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-   */
+  
 }
 .block > .symbol-X{
   position: absolute;
@@ -98,7 +95,7 @@ position: absolute;
   font-weight: 600;
   margin: 0;
 
-  position: absolute;
+
   top: 50%;
   left: 50%;
   margin-right: -50%;
@@ -202,10 +199,3 @@ position: absolute;
   opacity: 0.4;
 }
 
-.ad-1 {
-  width: 300px;
-  height: 600px;
-  background: gray;
-  position: absolute;
-  left: 0px;
-}
