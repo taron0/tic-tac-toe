@@ -37,6 +37,7 @@ body {
   text-overflow: clip ;
   text-transform: uppercase;
   text-align:center;
+ 
   
 
 }
@@ -79,7 +80,7 @@ body {
 .block > .symbol-O{
 position: absolute;
   font-size: 140px;
-  font-weight: 600;
+  /* font-weight: 600; */
   margin: 0;
 
   position: absolute;
@@ -92,7 +93,7 @@ position: absolute;
 .block > .symbol-X{
   position: absolute;
   font-size: 140px;
-  font-weight: 600;
+  /* font-weight: 600;  */
   margin: 0;
 
 
@@ -100,6 +101,7 @@ position: absolute;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%) ;
+
 }
 
 .scores {
@@ -210,11 +212,6 @@ position: absolute;
     margin-left: -225px;
     margin-top: -300px;
   }
-
- 
-
- 
-  
 }
 
 @media (max-width: 540px), (max-height: 560px) {
@@ -246,5 +243,73 @@ position: absolute;
     top: 380px;
     margin-top: 10px;
     padding-bottom: 20px;
+  }
+}
+
+
+@-webkit-keyframes border-blink {
+  50% {
+    border-color: #000;
+  }
+}
+
+@-moz-keyframes border-blink {
+  50% {
+    border-color: #000;
+  }
+}
+
+@keyframes border-blink {
+  50% {
+    border-color: #000;
+  }
+}
+
+@-webkit-keyframes blink {
+  50% {
+    visibility: hidden;
+  }
+}
+
+@-moz-keyframes blink {
+  50% {
+    visibility: hidden;
+  }
+}
+
+@keyframes blink {
+  50% {
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes appear {
+  from {
+    -webkit-transform: scale(0.3);
+    transform: scale(0.3);
+  }
+  to {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@-moz-keyframes appear {
+  from {
+    -moz-transform: scale(0.3);
+    transform: scale(0.3);
+  }
+  to {
+    -moz-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes appear {
+  from {
+    transform: scale(0.3);
+  }
+  to {
+    transform: scale(1);
   }
 }

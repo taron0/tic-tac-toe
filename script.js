@@ -43,11 +43,12 @@ window.onload = function () {
   function isGameOver() {
     let rez = check();
     let index = getPossibleMovesInvexes();
+    
     if (!!rez) {
       switch (rez) {
         case 1:
+          
           goo = 1;
-
           scoreOwn.textContent++;
           break;
         case 2:
@@ -81,20 +82,18 @@ window.onload = function () {
     ];
     for (let i = 0; i < winer.length; i++) {
       let winX =
-        allblock[winer[i][0]].innerHTML === `<p class="symbol-X">X</p>` &&
-        allblock[winer[i][1]].innerHTML === `<p class="symbol-X">X</p>` &&
-        allblock[winer[i][2]].innerHTML === `<p class="symbol-X">X</p>`;
+        allblock[winer[i][0]].innerHTML === `<p class="symbol-X">x</p>` &&
+        allblock[winer[i][1]].innerHTML === `<p class="symbol-X">x</p>` &&
+        allblock[winer[i][2]].innerHTML === `<p class="symbol-X">x</p>`;
+      console.log(winX);
       let winO =
         allblock[winer[i][0]].innerHTML === `<p class="symbol-O">O</p>` &&
         allblock[winer[i][1]].innerHTML === `<p class="symbol-O">O</p>` &&
         allblock[winer[i][2]].innerHTML === `<p class="symbol-O">O</p>`;
-      if (winX) {
-        
-        
+      if (!!winX) {
         return 1;
       }
       if (winO) {
-      
         return 2;
       }
     }
@@ -103,7 +102,7 @@ window.onload = function () {
   game.onclick = function (e) {
     if (goo === 0) {
       if (e.target.innerHTML === "") {
-        e.target.innerHTML = `<p class="symbol-X">X</p>`;
+        e.target.innerHTML = `<p class="symbol-X">x</p>`;
         goo = 1;
         if (!isGameOver()) {
           setTimeout(computerMove, 1000);
