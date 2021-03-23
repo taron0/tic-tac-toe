@@ -43,7 +43,7 @@ window.onload = function () {
   function isGameOver() {
     let rez = check();
     let index = getPossibleMovesInvexes();
-    
+
     if (!!rez) {
       switch (rez) {
         case 1:
