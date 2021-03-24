@@ -26,7 +26,7 @@ window.onload = function () {
     let index = getPossibleMovesInvexes();
     let random = Math.floor(Math.random() * index.length);
     let randblock = index[random];
-    allblock[randblock].innerHTML = `<p class="symbol-O">O</p>`;
+    allblock[randblock].innerHTML = `<p class="symbol-O">o</p>`;
     goo = 0;
     isGameOver();
   }
@@ -47,11 +47,11 @@ window.onload = function () {
     if (!!rez) {
       switch (rez) {
         case 1:
-          
           goo = 1;
           scoreOwn.textContent++;
           break;
         case 2:
+
           goo = 1;
           scoreTwo.textContent++;
           break;
@@ -85,11 +85,12 @@ window.onload = function () {
         allblock[winer[i][0]].innerHTML === `<p class="symbol-X">x</p>` &&
         allblock[winer[i][1]].innerHTML === `<p class="symbol-X">x</p>` &&
         allblock[winer[i][2]].innerHTML === `<p class="symbol-X">x</p>`;
-      console.log(winX);
+
       let winO =
-        allblock[winer[i][0]].innerHTML === `<p class="symbol-O">O</p>` &&
-        allblock[winer[i][1]].innerHTML === `<p class="symbol-O">O</p>` &&
-        allblock[winer[i][2]].innerHTML === `<p class="symbol-O">O</p>`;
+        allblock[winer[i][0]].innerHTML === `<p class="symbol-O">o</p>` &&
+        allblock[winer[i][1]].innerHTML === `<p class="symbol-O">o</p>` &&
+        allblock[winer[i][2]].innerHTML === `<p class="symbol-O">o</p>`;
+
       if (!!winX) {
         return 1;
       }
