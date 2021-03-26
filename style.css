@@ -53,7 +53,6 @@ main img {
   background: black;
   position: relative;
 
-  /* box-sizing: border-box; */
   line-height: 50px;
   text-align: center;
   align-content: center;
@@ -235,6 +234,7 @@ main img {
     top: 40px;
     margin-top: 10px;
   }
+  
   .scores {
     top: 380px;
     margin-top: 10px;
