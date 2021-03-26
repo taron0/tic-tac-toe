@@ -72,6 +72,8 @@ window.onload = function () {
     }
     clickAudio.play();
     if (!!rez || index.length === 0) {
+      const endMusic = new Audio("./Music/c.mp3");
+      endMusic.play();
       setTimeout(restart, 2000);
       return true;
     }
