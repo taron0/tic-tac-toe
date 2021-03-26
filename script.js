@@ -4,7 +4,7 @@ window.onload = function () {
   let score = document.querySelector(".score");
   let scoreOwn = document.querySelector(".score-1");
   let scoreTwo = document.querySelector(".score-2");
-  const clickAudio = new Audio("./Music/a.mp3");
+  const clickAudio = new Audio("./Music/b.mp3");
 
   for (let i = 0; i < 9; i++) {
     game.innerHTML += `<div class="block"></div>`;
@@ -124,7 +124,7 @@ window.onload = function () {
         goo = 1;
         if (!isGameOver()) {
           clickAudio.play();
-          setTimeout(computerMove, 1000);
+          setTimeout(computerMove, 2000);
         }
       }
     }
