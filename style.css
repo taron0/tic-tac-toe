@@ -187,7 +187,7 @@ position: absolute;
 
 
 
-.scores .o {
+.scores .symbol-O {
   display: inline-block;
   width: 13px;
   height: 13px;
@@ -332,3 +332,4 @@ background: -webkit-linear-gradient(to right, #ec2F4B, #009FFF);  /* Chrome 10-2
 background: linear-gradient(to right, #ec2F4B, #009FFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
+

@@ -43,21 +43,32 @@ window.onload = function () {
   function isGameOver() {
     let rez = check();
     let index = getPossibleMovesInvexes();
-
+    const symbolX = document.getElementsByClassName("symbol-X");
+    const symbolO = document.getElementsByClassName("symbol-O");
+    const blockBorder = document.getElementsByClassName("block")
     if (!!rez) {
       switch (rez) {
         case 1:
+        for(let i = 0; i < symbolX.length; i++) {
+         
+          symbolX[i].style.color = 'red'
+        }
           goo = 1;
           scoreOwn.textContent++;
           break;
         case 2:
-
+          for(let i = 0; i < symbolO.length; i++) {
+            symbolO[i].style.color = 'red'
+          }
           goo = 1;
           scoreTwo.textContent++;
           break;
       }
     } else {
       if (index.length === 0) {
+        for(let i = 0; i < blockBorder.length; i++) {
+ 
+        }
         goo = 1;
         score.textContent++;
       }
@@ -90,11 +101,14 @@ window.onload = function () {
         allblock[winer[i][0]].innerHTML === `<p class="symbol-O">o</p>` &&
         allblock[winer[i][1]].innerHTML === `<p class="symbol-O">o</p>` &&
         allblock[winer[i][2]].innerHTML === `<p class="symbol-O">o</p>`;
-
+     
+      
       if (!!winX) {
+
         return 1;
       }
       if (winO) {
+
         return 2;
       }
     }
@@ -112,3 +126,4 @@ window.onload = function () {
     }
   };
 };
+
