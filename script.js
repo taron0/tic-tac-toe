@@ -126,7 +126,6 @@ window.onload = function () {
         e.target.innerHTML = `<p class="symbol-X">x</p>`;
         goo = 1;
         if (!isGameOver()) {
-       
           setTimeout(computerMove, 2000);
         }
       }
