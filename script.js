@@ -27,10 +27,11 @@ window.onload = function () {
     let index = getPossibleMovesInvexes();
     let random = Math.floor(Math.random() * index.length);
     let randblock = index[random];
-    clickAudio.play();
+    
     allblock[randblock].innerHTML = `<p class="symbol-O">o</p>`;
-    goo = 0;
     clickAudio.play();
+    goo = 0;
+
     isGameOver();
   }
 
@@ -51,12 +52,12 @@ window.onload = function () {
     if (!!rez) {
       switch (rez) {
         case 1:
-          clickAudio.play();
+         
           goo = 1;
           scoreOwn.textContent++;
           break;
         case 2:
-          clickAudio.play();
+         
           goo = 1;
           scoreTwo.textContent++;
           break;
@@ -66,7 +67,7 @@ window.onload = function () {
         for(let i = 0; i< blocks.length; i++) {
           blocks[i].classList.add("active")
         }
-        clickAudio.play();
+        
         goo = 1;
         score.textContent++;
       }
@@ -102,7 +103,7 @@ window.onload = function () {
         allblock[winer[i][2]].innerHTML === `<p class="symbol-O">o</p>`;
 
       if (!!winX) {
-        clickAudio.play();
+        
         allblock[winer[i][0]].classList.add("active") 
         allblock[winer[i][1]].classList.add('active')
         allblock[winer[i][2]].classList.add('active')
@@ -110,7 +111,7 @@ window.onload = function () {
         return 1;
       }
       if (winO) {
-        clickAudio.play();
+      
         allblock[winer[i][0]].classList.add("active") 
         allblock[winer[i][1]].classList.add('active')
         allblock[winer[i][2]].classList.add('active')
@@ -124,7 +125,7 @@ window.onload = function () {
  
   game.onclick = function (e) {
     if (goo === 0) {
-      clickAudio.play();
+      
       if (e.target.innerHTML === "") {
         clickAudio.play();
         e.target.innerHTML = `<p class="symbol-X">x</p>`;
@@ -132,7 +133,7 @@ window.onload = function () {
         if (!isGameOver()) {
           clickAudio.play();
           setTimeout(computerMove, 1000);
-          clickAudio.play();
+        
         }
       }
     }
