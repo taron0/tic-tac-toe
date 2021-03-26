@@ -71,7 +71,7 @@ window.onload = function () {
         score.textContent++;
       }
     }
-    clickAudio.play();
+  
     if (!!rez || index.length === 0) {
       const endMusic = new Audio("./Music/c.mp3");
       endMusic.play();
