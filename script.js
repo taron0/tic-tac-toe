@@ -27,7 +27,7 @@ window.onload = function () {
     let index = getPossibleMovesInvexes();
     let random = Math.floor(Math.random() * index.length);
     let randblock = index[random];
-    
+
     allblock[randblock].innerHTML = `<p class="symbol-O">o</p>`;
     clickAudio.play();
     goo = 0;
@@ -45,29 +45,27 @@ window.onload = function () {
   }
 
   function isGameOver() {
-    const blocks = document.getElementsByClassName("block")
+    const blocks = document.getElementsByClassName("block");
     let rez = check();
     let index = getPossibleMovesInvexes();
 
     if (!!rez) {
       switch (rez) {
         case 1:
-         
           goo = 1;
           scoreOwn.textContent++;
           break;
         case 2:
-         
           goo = 1;
           scoreTwo.textContent++;
           break;
       }
     } else {
       if (index.length === 0) {
-        for(let i = 0; i< blocks.length; i++) {
-          blocks[i].classList.add("active")
+        for (let i = 0; i < blocks.length; i++) {
+          blocks[i].classList.add("active");
         }
-        
+
         goo = 1;
         score.textContent++;
       }
@@ -103,29 +101,23 @@ window.onload = function () {
         allblock[winer[i][2]].innerHTML === `<p class="symbol-O">o</p>`;
 
       if (!!winX) {
-        
-        allblock[winer[i][0]].classList.add("active") 
-        allblock[winer[i][1]].classList.add('active')
-        allblock[winer[i][2]].classList.add('active')
-      
+        allblock[winer[i][0]].classList.add("active");
+        allblock[winer[i][1]].classList.add("active");
+        allblock[winer[i][2]].classList.add("active");
+
         return 1;
       }
       if (winO) {
-      
-        allblock[winer[i][0]].classList.add("active") 
-        allblock[winer[i][1]].classList.add('active')
-        allblock[winer[i][2]].classList.add('active')
+        allblock[winer[i][0]].classList.add("active");
+        allblock[winer[i][1]].classList.add("active");
+        allblock[winer[i][2]].classList.add("active");
         return 2;
       }
-
     }
   }
 
-
- 
   game.onclick = function (e) {
     if (goo === 0) {
-      
       if (e.target.innerHTML === "") {
         clickAudio.play();
         e.target.innerHTML = `<p class="symbol-X">x</p>`;
@@ -133,7 +125,6 @@ window.onload = function () {
         if (!isGameOver()) {
           clickAudio.play();
           setTimeout(computerMove, 1000);
-        
         }
       }
     }

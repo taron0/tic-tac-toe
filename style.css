@@ -159,7 +159,6 @@ main img {
   height: 50px;
   padding: 10px 0 0 0;
   color: white;
-
 }
 
 .scores .symbol-O {
@@ -168,14 +167,12 @@ main img {
   height: 13px;
   border-width: 2px;
   margin: 1px;
-
 }
 
 .scores .symbol-X {
   display: inline-block;
   width: 17px;
   height: 17px;
- 
 }
 
 .scores .symbol-X:before,
