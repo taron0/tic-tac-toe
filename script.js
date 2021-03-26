@@ -41,29 +41,28 @@ window.onload = function () {
   }
 
   function isGameOver() {
+    const blocks = document.getElementsByClassName("block")
     let rez = check();
     let index = getPossibleMovesInvexes();
-    const symbolX = document.getElementsByClassName("symbol-X");
-    const symbolO = document.getElementsByClassName("symbol-O");
+
     if (!!rez) {
       switch (rez) {
         case 1:
-          for (let i = 0; i < symbolX.length; i++) {
-            symbolX[i].style.color = "red";
-          }
+ 
           goo = 1;
           scoreOwn.textContent++;
           break;
         case 2:
-          for (let i = 0; i < symbolO.length; i++) {
-            symbolO[i].style.color = "red";
-          }
+
           goo = 1;
           scoreTwo.textContent++;
           break;
       }
     } else {
       if (index.length === 0) {
+        for(let i = 0; i< blocks.length; i++) {
+          blocks[i].classList.add("active")
+        }
         goo = 1;
         score.textContent++;
       }
@@ -98,11 +97,20 @@ window.onload = function () {
         allblock[winer[i][2]].innerHTML === `<p class="symbol-O">o</p>`;
 
       if (!!winX) {
+       
+        allblock[winer[i][0]].classList.add("active") 
+        allblock[winer[i][1]].classList.add('active')
+        allblock[winer[i][2]].classList.add('active')
+      
         return 1;
       }
       if (winO) {
+        allblock[winer[i][0]].classList.add("active") 
+        allblock[winer[i][1]].classList.add('active')
+        allblock[winer[i][2]].classList.add('active')
         return 2;
       }
+
     }
   }
 
