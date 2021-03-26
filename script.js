@@ -24,12 +24,13 @@ window.onload = function () {
   }
 
   function computerMove() {
+    const OAudio = new Audio("./Music/o.mp3");
     let index = getPossibleMovesInvexes();
     let random = Math.floor(Math.random() * index.length);
     let randblock = index[random];
 
     allblock[randblock].innerHTML = `<p class="symbol-O">o</p>`;
-    clickAudio.play();
+    OAudio.play();
     goo = 0;
 
     isGameOver();
@@ -125,7 +126,7 @@ window.onload = function () {
         e.target.innerHTML = `<p class="symbol-X">x</p>`;
         goo = 1;
         if (!isGameOver()) {
-          clickAudio.play();
+       
           setTimeout(computerMove, 2000);
         }
       }
