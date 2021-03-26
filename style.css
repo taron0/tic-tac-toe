@@ -14,10 +14,10 @@ main {
   position: relative;
   display: flex;
 
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
+  justify-content:space-between;
+  align-content:space-between;
   margin: 0 auto;
   position: absolute;
   top: 50%;
@@ -25,6 +25,7 @@ main {
   margin-right: -50%;
   transform: translate(-50%, -50%);
 }
+
 
 main img {
   overflow: hidden;
@@ -203,6 +204,12 @@ main img {
 .scores .turn {
   opacity: 0.4;
 }
+/* .main {
+  display: flex;
+  flex-direction: row;
+  
+} */
+
 
 @media (max-width: 630px), (max-height: 800px) {
   .game {
@@ -234,7 +241,7 @@ main img {
     top: 40px;
     margin-top: 10px;
   }
-  
+
   .scores {
     top: 380px;
     margin-top: 10px;
